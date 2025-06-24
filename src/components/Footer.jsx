@@ -110,18 +110,18 @@ const FooterSection = ({ mode }) => {
                       About Us
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="" className="hover:text-blue-400">
                       Careers
                     </a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#" className="hover:text-blue-400">
+                    <a href="/privacypolicy" className="hover:text-blue-400">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
+                    <a href="/termsandconditions" className="hover:text-blue-400">
                       Terms of Service
                     </a>
                   </li>
