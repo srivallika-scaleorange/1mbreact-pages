@@ -1,3 +1,4 @@
+
 // import React, { useContext } from "react";
 // import AppContext from "../context/AppContext";
 // import {
@@ -92,6 +93,29 @@
 //   },
 // ];
 
+// const whyInvest = [
+//   {
+//     title: "Massive Market Potential",
+//     desc: "Growing demand for preventive healthcare, wearable integrations, and AI-driven health insights.",
+//     icon: ChartBarIcon,
+//   },
+//   {
+//     title: "Cutting-Edge Innovation",
+//     desc: "Powered by AI, ML, IoT, and Digital Twin for real-time monitoring and predictions.",
+//     icon: LightBulbIcon,
+//   },
+//   {
+//     title: "Strong Industry Backing",
+//     desc: "Designed by experts in healthcare, data science, and AI-driven analytics.",
+//     icon: LockClosedIcon,
+//   },
+//   {
+//     title: "Scalable & Global Impact",
+//     desc: "Potential to transform individual wellness and healthcare systems worldwide.",
+//     icon: UsersIcon,
+//   },
+// ];
+
 // // --- UI Components ---
 
 // const SectionTitle = ({ children, theme }) => (
@@ -168,6 +192,10 @@
 //     theme === "dark"
 //       ? "bg-[linear-gradient(120deg,#334155_0%,#1e293b_100%)]"
 //       : "bg-[linear-gradient(120deg,#f3f4f6_0%,#e0f2fe_100%)]";
+//   const sectionBg3 =
+//     theme === "dark"
+//       ? "bg-[linear-gradient(120deg,#1e293b_0%,#334155_100%)]"
+//       : "bg-[linear-gradient(120deg,#e0f2fe_0%,#f3f4f6_100%)]";
 
 //   return (
 //     <div className={isDarkMode ? "dark" : ""}>
@@ -189,6 +217,7 @@
 //           </div>
 //         </div>
 //       </section>
+
 //       {/* Healthcare Challenges */}
 //       <section className={`py-20 transition-colors duration-300 ${sectionBg2}`}>
 //         <div className="max-w-7xl mx-auto px-4">
@@ -207,12 +236,30 @@
 //           </div>
 //         </div>
 //       </section>
+
+//       {/* Why Invest in 1MBHealthy */}
+//       <section className={`py-20 transition-colors duration-300 ${sectionBg3}`}>
+//         <div className="max-w-7xl mx-auto px-4">
+//           <SectionTitle theme={theme}>Why Invest in 1MBHealthy?</SectionTitle>
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+//             {whyInvest.map((item, idx) => (
+//               <GlowCard
+//                 key={item.title}
+//                 title={item.title}
+//                 desc={item.desc}
+//                 theme={theme}
+//                 index={idx}
+//                 icon={item.icon}
+//               />
+//             ))}
+//           </div>
+//         </div>
+//       </section>
 //     </div>
 //   );
 // };
 
 // export default HealthySection;
-
 
 import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
@@ -229,8 +276,8 @@ import {
   BeakerIcon,
   DocumentChartBarIcon,
   UsersIcon,
+  PlayIcon,
 } from "@heroicons/react/24/outline";
-
 
 const whyHealthy = [
   {
@@ -394,6 +441,70 @@ const GlowCard = ({ title, desc, theme, index, icon: Icon }) => {
   );
 };
 
+const VideoSection = ({ theme }) => {
+  const sectionBg = theme === "dark"
+    ? "bg-[linear-gradient(135deg,#0f172a_0%,#1e293b_100%)]"
+    : "bg-[linear-gradient(135deg,#f8fafc_0%,#e2e8f0_100%)]";
+
+  return (
+    <section className={`py-20 transition-colors duration-300 ${sectionBg}`}>
+      <div className="max-w-6xl mx-auto px-4">
+        <SectionTitle theme={theme}>Experience 1MBHealthy in Action</SectionTitle>
+        
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-4xl">
+          {/* Option 1: Direct video file (if hosted locally) */}
+          <video
+            className="w-full h-auto"
+            controls
+            preload="metadata"
+            poster="/images/video-thumbnail.png" // Add a thumbnail image
+          >
+            <source src="/videos/1mbhealthy-demo.mp4" type="video/mp4" />
+            <source src="/videos/1mbhealthy-demo.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Option 2: YouTube Embed (uncomment if using YouTube) */}
+          {/*
+          <div className="relative pb-[56.25%] h-0 overflow-hidden">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="1MBHealthy Demo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          */}
+          
+          {/* Option 3: Vimeo Embed (uncomment if using Vimeo) */}
+          {/*
+          <div className="relative pb-[56.25%] h-0 overflow-hidden">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
+              title="1MBHealthy Demo"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          */}
+        </div>
+
+        {/* Video Description */}
+        <div className="text-center mt-8 max-w-3xl mx-auto">
+          <p className={`text-lg ${theme === "dark" ? "text-[#cbd5e1]" : "text-[#475569]"}`}>
+            Watch how 1MBHealthy transforms healthcare through AI-driven personalization, 
+            seamless integrations, and comprehensive wellness management for individuals and families.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const HealthySection = () => {
   const { isDarkMode } = useContext(AppContext);
   const theme = isDarkMode ? "dark" : "light";
@@ -432,6 +543,9 @@ const HealthySection = () => {
           </div>
         </div>
       </section>
+
+      {/* Video Section - NEW ADDITION */}
+      <VideoSection theme={theme} />
 
       {/* Healthcare Challenges */}
       <section className={`py-20 transition-colors duration-300 ${sectionBg2}`}>
