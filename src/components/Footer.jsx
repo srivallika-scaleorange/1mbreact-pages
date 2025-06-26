@@ -21,7 +21,7 @@ const FooterSection = ({ mode }) => {
     };
 
     try {
-      const response = await fetch("https://aa4f-2401-4900-1cb0-a579-a7ab-4cc7-7259-5340.ngrok-free.app/send-email", {
+      const response = await fetch("https://dev.1mbhealthy.com/api/v1/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

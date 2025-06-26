@@ -75,7 +75,7 @@ const AbdmIntegration = () => {
 
         {/* Features */}
         <div className="space-y-12">
-          {features.map((feature, idx) => (
+          {features.map((feature) => (
             <div
               key={feature.title}
               className={`
