@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import AppContext from '../context/AppContext';
-
+import SEO from './SEO'; // Assuming you have a SEO component for managing meta tags
 const ABDMBlog = () => {
   const { isDarkMode } = useContext(AppContext);
   const description = 'Understand the impact of Ayushman Bharat Digital Mission (ABDM) and how 1MB Healthy integrates ABHA for seamless healthcare.';
