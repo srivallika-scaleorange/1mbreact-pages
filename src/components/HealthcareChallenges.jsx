@@ -196,7 +196,7 @@ const VideoSection = ({ theme }) => {
             preload="metadata"
             poster="/images/video-thumbnail.png" // Add a thumbnail image
           >
-            <source src="https://dev.1mbhealthy.com/videos/1mb.mp4" />
+            <source src="https://dev.1mbhealthy.com/api/v1/videos/1mb.mp4" />
             Your browser does not support the video tag.
           </video>
           
