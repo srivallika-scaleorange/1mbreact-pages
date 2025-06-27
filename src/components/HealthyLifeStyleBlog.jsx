@@ -4,11 +4,19 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import AppContext from '../context/AppContext';
-
+import SEO from './SEO'; // Assuming you have a SEO component for managing meta tags
 const HealthyLifestyleBlog = () => {
   const { isDarkMode } = useContext(AppContext);
-
+  const description = 'Discover tips for a healthier lifestyle with 1MB Healthy’s expert advice on wellness, fitness, and nutrition.';
   return (
+    <>
+    <SEO
+        title="Tips for a Healthier Lifestyle - 1MB Healthy Blog"
+        description={description}
+        keywords="healthy lifestyle, wellness tips, fitness advice, nutrition, 1MB Healthy"
+        url="https://1mbhealthy.com/blog/healthier-lifestyle-tips"
+        type="article"
+      />
     <div className={`min-h-screen ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} py-12`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
@@ -229,6 +237,7 @@ const HealthyLifestyleBlog = () => {
         </article>
       </div>
     </div>
+    </>
   );
 };
 export default HealthyLifestyleBlog;

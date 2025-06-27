@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
-
+import SEO from "./SEO";
 const features = [
   {
     title: "Seamless ABHA Integration",
@@ -36,6 +36,13 @@ const AbdmIntegration = () => {
   const { isDarkMode } = useContext(AppContext);
 
   return (
+    <>
+    <SEO
+        title="ABDM Integration - 1MB Healthy | Ayushman Bharat Digital Mission"
+        description="Discover how 1MB Healthy integrates with ABDM to provide seamless digital health records, ABHA creation, and unified healthcare solutions."
+        keywords="ABDM, Ayushman Bharat, ABHA integration, digital health records, 1MB Healthy"
+        url="https://1mbhealthy.com/abdm"
+      />
     <section
       id="abdm-nha"
       className={`py-16 md:py-24 ${
@@ -136,6 +143,7 @@ const AbdmIntegration = () => {
         </span>
       </footer>
     </section>
+    </>
   );
 };
 

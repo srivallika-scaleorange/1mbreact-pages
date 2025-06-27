@@ -31,6 +31,12 @@ const AboutUs = () => {
     "bg-gradient-to-r from-[#3b82f6] via-[#10b981] to-[#3b82f6] bg-clip-text text-transparent";
 
   return (
+    <><SEO
+    title="About 1MB Healthy - AI-Powered Healthcare Platform"
+    description="Learn about 1MB Healthy’s mission to revolutionize healthcare with AI-driven personalization, ABHA integration, and predictive care."
+    keywords="about 1mb healthy, AI healthcare, ABHA integration, predictive healthcare"
+    url="https://1mbhealthy.com/about"
+  />
     <section
       className={`min-h-screen flex items-center justify-center px-4 py-16 sm:py-24 ${bgSection} transition-all duration-500 relative overflow-hidden`}
     >
@@ -185,6 +191,7 @@ const AboutUs = () => {
         }
       `}</style>
     </section>
+    </>
   );
 };
 

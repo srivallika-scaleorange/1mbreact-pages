@@ -12,7 +12,7 @@ import {
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { AppContext } from '../context/AppContext';
-
+import SEO from './SEO';
 const solutions = [
   {
     title: "Digital Health Locker",
@@ -59,6 +59,14 @@ const SolutionsCarousel = () => {
   const { title, description, icon, image } = solutions[current];
 
   return (
+    <>
+    <SEO
+        title="AI-Powered Healthcare Solutions - 1MB Healthy"
+        description="Explore 1MB Healthy’s AI-driven solutions: health copilot, digital health lockers, personalized wellness plans, and clinical-grade insights."
+        keywords="AI healthcare, health copilot, digital health locker, personalized health plans, 1MB Healthy"
+        url="https://1mbhealthy.com/solutions"
+      />
+  
     <Box
       id="solutions"
       sx={{
@@ -274,6 +282,7 @@ const SolutionsCarousel = () => {
         </Box>
       </Box>
     </Box>
+    </>
   );
 };
 

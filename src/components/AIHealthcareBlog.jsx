@@ -2,11 +2,18 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import AppContext from '../context/AppContext';
-
+import SEO from './SEO'; // Assuming you have a SEO component for managing meta tags
 const AIHealthcareBlog = () => {
   const { isDarkMode } = useContext(AppContext);
-
+  const description = 'Explore how AI is transforming healthcare with personalized insights, clinical-grade diagnostics, and predictive care on 1MB Healthy.';
   return (
+    <><SEO
+    title="The Future of AI in Healthcare - 1MB Healthy Blog"
+    description={description}
+    keywords="AI healthcare, clinical diagnostics, predictive care, 1MB Healthy"
+    url="https://1mbhealthy.com/blog/ai-healthcare-future"
+    type="article"
+  />
     <div className={`min-h-screen ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} py-12`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
@@ -120,6 +127,7 @@ const AIHealthcareBlog = () => {
         </article>
       </div>
     </div>
+    </>
   );
 };
 

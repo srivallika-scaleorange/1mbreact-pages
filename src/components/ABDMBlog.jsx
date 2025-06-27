@@ -5,8 +5,16 @@ import AppContext from '../context/AppContext';
 
 const ABDMBlog = () => {
   const { isDarkMode } = useContext(AppContext);
-
+  const description = 'Understand the impact of Ayushman Bharat Digital Mission (ABDM) and how 1MB Healthy integrates ABHA for seamless healthcare.';
   return (
+   <>
+   <SEO
+        title="Understanding ABDM’s Impact - 1MB Healthy Blog"
+        description={description}
+        keywords="ABDM, Ayushman Bharat, ABHA integration, digital healthcare, 1MB Healthy"
+        url="https://1mbhealthy.com/blog/abdm-impact-understanding"
+        type="article"
+      />
     <div className={`min-h-screen ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} py-12`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
@@ -154,6 +162,7 @@ const ABDMBlog = () => {
         </article>
       </div>
     </div>
+    </>
   );
 };
 

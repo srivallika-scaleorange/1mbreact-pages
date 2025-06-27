@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import { ArrowRightIcon, BookOpenIcon, HeartIcon, LightBulbIcon } from '@heroicons/react/24/outline';
-
+import SEO from './SEO'; // Assuming you have a SEO component for managing meta tags
 const blogs = [
   {
     id: 'ai-healthcare-future',
@@ -33,6 +33,13 @@ const BlogSection = () => {
   const { isDarkMode } = useContext(AppContext);
 
   return (
+    <>
+    <SEO
+        title="1MB Healthy Blog - Health & Wellness Insights"
+        description="Read the latest insights on AI-driven healthcare, healthy lifestyles, and ABDM integration from 1MB Healthy’s blog."
+        keywords="health blog, AI healthcare, wellness tips, ABDM, 1MB Healthy"
+        url="https://1mbhealthy.com/blogs"
+      />
     <section
       id="1mbWellness"
       className={`${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} py-16 md:py-24`}
@@ -81,6 +88,7 @@ const BlogSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

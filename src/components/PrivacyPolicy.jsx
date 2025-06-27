@@ -1,7 +1,14 @@
 import React from 'react';
-
+import SEO from './SEO'; // Assuming you have a SEO component for managing meta tags
 const PrivacyPolicy = () => {
   return (
+    <>
+    <SEO
+        title="Privacy Policy - 1MB Healthy"
+        description="Understand how 1MB Healthy protects your data and privacy with our comprehensive privacy policy."
+        keywords="privacy policy, 1MB Healthy, data protection, healthcare privacy"
+        url="https://1mbhealthy.com/privacypolicy"
+      />
     <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800">
       <h1 className="text-3xl font-bold mb-6 text-indigo-700">Privacy Policy for Deepmindz AI Private Limited</h1>
       <p className="mb-4 text-gray-600">Effective Date: June 25, 2025</p>
@@ -105,6 +112,7 @@ const PrivacyPolicy = () => {
         By using our Services, you consent to the collection, use, and disclosure of your information as outlined in this Privacy Policy.
       </p>
     </div>
+    </>
   );
 };
 

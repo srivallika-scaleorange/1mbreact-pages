@@ -123,7 +123,6 @@ const VisionSection = ({ mode }) => {
     "/images/360deg.jpeg",
   ];
 
-  // Auto-cycle images every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
