@@ -177,69 +177,6 @@ const GlowCard = ({ title, desc, theme, index, icon: Icon }) => {
     </div>
   );
 };
-
-// const VideoSection = ({ theme }) => {
-//   const sectionBg = theme === "dark"
-//     ? "bg-[linear-gradient(135deg,#0f172a_0%,#1e293b_100%)]"
-//     : "bg-[linear-gradient(135deg,#f8fafc_0%,#e2e8f0_100%)]";
-
-//   return (
-//     <section className={`py-20 transition-colors duration-300 ${sectionBg}`}>
-//       <div className="max-w-6xl mx-auto px-4">
-//         <SectionTitle theme={theme}>Experience 1MBHealthy in Action</SectionTitle>
-        
-//         <div className="relative rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-4xl">
-//           {/* Option 1: Direct video file (if hosted locally) */}
-//           <video
-//             className="w-full h-auto"
-//             controls
-//             preload="metadata"
-//             poster="/images/video-thumbnail.png" // Add a thumbnail image
-//           >
-//             <source src="https://dev.1mbhealthy.com/api/v1/videos/1mb.mp4" />
-//             Your browser does not support the video tag.
-//           </video>
-          
-//           {/* Option 2: YouTube Embed (uncomment if using YouTube) */}
-//           {/*
-//           <div className="relative pb-[56.25%] h-0 overflow-hidden">
-//             <iframe
-//               className="absolute top-0 left-0 w-full h-full"
-//               src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-//               title="1MBHealthy Demo"
-//               frameBorder="0"
-//               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//               allowFullScreen
-//             ></iframe>
-//           </div>
-//           */}
-          
-//           {/* Option 3: Vimeo Embed (uncomment if using Vimeo) */}
-//           {/*
-//           <div className="relative pb-[56.25%] h-0 overflow-hidden">
-//             <iframe
-//               className="absolute top-0 left-0 w-full h-full"
-//               src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-//               title="1MBHealthy Demo"
-//               frameBorder="0"
-//               allow="autoplay; fullscreen; picture-in-picture"
-//               allowFullScreen
-//             ></iframe>
-//           </div>
-//           */}
-//         </div>
-
-//         {/* Video Description */}
-//         <div className="text-center mt-8 max-w-3xl mx-auto">
-//           <p className={`text-lg ${theme === "dark" ? "text-[#cbd5e1]" : "text-[#475569]"}`}>
-//             Watch how 1MBHealthy transforms healthcare through AI-driven personalization, 
-//             seamless integrations, and comprehensive wellness management for individuals and families.
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
 const VideoSection = ({ theme }) => {
   const sectionBg = theme === "dark"
     ? "bg-[linear-gradient(135deg,#0f172a_0%,#1e293b_100%)]"
@@ -250,28 +187,8 @@ const VideoSection = ({ theme }) => {
       <div className="max-w-6xl mx-auto px-4">
         <SectionTitle theme={theme}>Experience 1MBHealthy in Action</SectionTitle>
         
-        {/* Two videos side by side */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          
-          {/* Left Video - Original */}
-          <div className="relative">
-            <h3 className={`text-xl font-semibold mb-4 text-center ${theme === "dark" ? "text-[#e0f2fe]" : "text-[#22223b]"}`}>
-              Platform Demo
-            </h3>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <video
-                className="w-full h-auto"
-                controls
-                preload="metadata"
-                poster="/images/video-thumbnail1.png"
-              >
-                <source src="https://dev.1mbhealthy.com/api/v1/videos/1mb.mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-          {/* Right Video - YouTube */}
+        {/* Single YouTube video centered */}
+        <div className="max-w-4xl mx-auto">
           <div className="relative">
             <h3 className={`text-xl font-semibold mb-4 text-center ${theme === "dark" ? "text-[#e0f2fe]" : "text-[#22223b]"}`}>
               Product Overview
@@ -302,6 +219,68 @@ const VideoSection = ({ theme }) => {
     </section>
   );
 };
+// const VideoSection = ({ theme }) => {
+//   const sectionBg = theme === "dark"
+//     ? "bg-[linear-gradient(135deg,#0f172a_0%,#1e293b_100%)]"
+//     : "bg-[linear-gradient(135deg,#f8fafc_0%,#e2e8f0_100%)]";
+
+//   return (
+//     <section className={`py-20 transition-colors duration-300 ${sectionBg}`}>
+//       <div className="max-w-6xl mx-auto px-4">
+//         <SectionTitle theme={theme}>Experience 1MBHealthy in Action</SectionTitle>
+        
+//         {/* Two videos side by side */}
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          
+//           {/* Left Video - Original */}
+//           <div className="relative">
+//             <h3 className={`text-xl font-semibold mb-4 text-center ${theme === "dark" ? "text-[#e0f2fe]" : "text-[#22223b]"}`}>
+//               Platform Demo
+//             </h3>
+//             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+//               <video
+//                 className="w-full h-auto"
+//                 controls
+//                 preload="metadata"
+//                 poster="/images/video-thumbnail1.png"
+//               >
+//                 <source src="https://dev.1mbhealthy.com/api/v1/videos/1mb.mp4" />
+//                 Your browser does not support the video tag.
+//               </video>
+//             </div>
+//           </div>
+
+//           {/* Right Video - YouTube */}
+//           <div className="relative">
+//             <h3 className={`text-xl font-semibold mb-4 text-center ${theme === "dark" ? "text-[#e0f2fe]" : "text-[#22223b]"}`}>
+//               Product Overview
+//             </h3>
+//             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+//               <div className="relative pb-[56.25%] h-0 overflow-hidden">
+//                 <iframe
+//                   className="absolute top-0 left-0 w-full h-full"
+//                   src="https://www.youtube.com/embed/8qmb9DoDna8"
+//                   title="1MBHealthy Product Overview"
+//                   frameBorder="0"
+//                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//                   allowFullScreen
+//                 ></iframe>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Video Description */}
+//         <div className="text-center mt-12 max-w-4xl mx-auto">
+//           <p className={`text-lg ${theme === "dark" ? "text-[#cbd5e1]" : "text-[#475569]"}`}>
+//             Explore how 1MBHealthy transforms healthcare through AI-driven personalization, 
+//             seamless integrations, and comprehensive wellness management for individuals and families.
+//           </p>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 const HealthySection = () => {
   const { isDarkMode } = useContext(AppContext);
   const theme = isDarkMode ? "dark" : "light";
