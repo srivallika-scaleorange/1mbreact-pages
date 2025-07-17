@@ -137,7 +137,6 @@ const SectionTitle = ({ children, theme }) => (
 );
 
 const GlowCard = ({ title, desc, theme, index, icon: Icon }) => {
-  // Accent colors for borders and shadows
   const borderColors = [
     theme === "dark" ? "border-blue-500" : "border-blue-400",
     theme === "dark" ? "border-emerald-500" : "border-emerald-400",

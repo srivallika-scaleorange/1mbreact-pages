@@ -55,7 +55,7 @@ import AboutUs from './components/AboutUs';
 import TermsAndConditions from './components/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import './App.css';
-
+import DataDeletionPolicy from './components/DataDeletionPolicy.jsx';
 const App = () => {
   const location = useLocation(); // Get current route
 
@@ -77,6 +77,8 @@ const App = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/contactus" element={<FooterSections />} />
+        <Route path="/datadeletionpolicy" element={<DataDeletionPolicy />} />
+
       </Routes>
       {showFooter && <FooterSections />}
     </div>

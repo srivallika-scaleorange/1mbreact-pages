@@ -162,6 +162,11 @@ const FooterSection = ({ mode }) => {
                       Terms of Service
                     </a>
                   </li>
+                  <li>
+                    <a href="/datadeletionpolicy" className="hover:text-blue-400">
+                      Delete Policy
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
