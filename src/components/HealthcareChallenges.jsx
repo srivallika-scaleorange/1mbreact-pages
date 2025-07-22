@@ -32,11 +32,11 @@ const whyHealthy = [
     desc: "Seamless integration with wearables, diagnostic labs, pharmacies, and insurance providers.",
     icon: PuzzlePieceIcon,
   },
-  {
-    title: "Hyper-Personalized Wellness Plans",
-    desc: "Custom diet, fitness, and mental health recommendations for every individual.",
-    icon: HeartIcon,
-  },
+  // {
+  //   title: "Hyper-Personalized Wellness Plans",
+  //   desc: "Custom diet, fitness, and mental health recommendations for every individual.",
+  //   icon: HeartIcon,
+  // },
   {
     title: "Clinical-Grade Insights",
     desc: "Evidence-based AI models that assist users and healthcare professionals.",
