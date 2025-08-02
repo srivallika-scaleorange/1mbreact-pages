@@ -624,6 +624,10 @@ const PrivacyPolicy = () => {
             <li>Improving our AI-driven diagnostics and Health Copilot by incorporating location-specific health trends or environmental factors.</li>
           </ul>
          
+
+
+
+         
          
           <p className="mb-4 text-gray-700">
             <strong>Location Data Security:</strong> We implement technical and organizational measures to protect your location data, including pincode, against unauthorized access, loss, or misuse. Location data is stored on secure servers and encrypted during transmission. We limit access to location data to authorized personnel and service providers who need it to perform their functions.

@@ -56,6 +56,7 @@ import TermsAndConditions from './components/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import './App.css';
 import DataDeletionPolicy from './components/DataDeletionPolicy.jsx';
+import SharedChatPage from './components/SharedChat';
 const App = () => {
   const location = useLocation(); // Get current route
 
@@ -78,6 +79,7 @@ const App = () => {
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/contactus" element={<FooterSections />} />
         <Route path="/datadeletionpolicy" element={<DataDeletionPolicy />} />
+        <Route path="/shared/:shareId" element={<SharedChatPage />} />
 
       </Routes>
       {showFooter && <FooterSections />}
