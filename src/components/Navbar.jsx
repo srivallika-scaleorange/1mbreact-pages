@@ -27,6 +27,8 @@ const navLinks = [
   { label: "Solutions", to: "/solutions" },
   { label: "1MBWellness", to: "/blogs" },
   { label: "Contact Us", to: "#contact-us" }, // Keep for reference, but we'll handle it differently
+{ label: "Privacy Policy", to: "/privacypolicy" },   // ✅ Added
+  { label: "Terms", to: "/termsandconditions" },  
 ];
 
 const Navbar = () => {
@@ -352,5 +354,6 @@ const Navbar = () => {
     </>
   );
 };
+
 
 export default Navbar;
