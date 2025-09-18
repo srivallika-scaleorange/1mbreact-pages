@@ -63,9 +63,9 @@ health data for better, faster, smarter healthcare outcomes.        </p>
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
           <button
-            onClick={() => {
-              document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
-            }}
+           onClick={() => {
+            window.location.href = "https://app.1mbhealthy.com";
+          }}
             className={`flex items-center justify-center ${btnGradient} ${btnText} ${btnShadow} ${btnRounded} px-8 py-3 font-semibold text-lg transition-all duration-200 ${btnGradientHover}`}
           >
             Start Your Health Journey

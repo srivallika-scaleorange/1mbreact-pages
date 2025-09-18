@@ -1,4 +1,3 @@
-
 import React, { useContext, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -18,6 +17,7 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import LaunchIcon from "@mui/icons-material/Launch";
 import { Link } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 
@@ -26,9 +26,9 @@ const navLinks = [
   { label: "ABDM & NHA", to: "/abdm" },
   { label: "Solutions", to: "/solutions" },
   { label: "1MBWellness", to: "/blogs" },
-  { label: "Contact Us", to: "#contact-us" }, // Keep for reference, but we'll handle it differently
-{ label: "Privacy Policy", to: "/privacypolicy" },   // ✅ Added
-  { label: "Terms", to: "/termsandconditions" },  
+  { label: "Contact Us", to: "#contact-us" }, 
+  {label:"Privacy Policy", to:"/privacypolicy"},
+  { label: "Login", external: "https://app.1mbhealthy.com" }
 ];
 
 const Navbar = () => {
@@ -47,6 +47,11 @@ const Navbar = () => {
 
   const handleContactUsClick = () => {
     document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
+    handleMenuItemClick(); // Close drawer on mobile
+  };
+
+  const handleExternalLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
     handleMenuItemClick(); // Close drawer on mobile
   };
 
@@ -118,7 +123,36 @@ const Navbar = () => {
                   }}
                 />
               </ListItemButton>
+            ) : link.external ? (
+              // Handle external links
+              <ListItemButton
+                onClick={() => handleExternalLink(link.external)}
+                sx={{
+                  py: 1.5,
+                  px: 3,
+                  "&:hover": {
+                    bgcolor: isDarkMode
+                      ? "rgba(187,134,252,0.08)"
+                      : "rgba(99,102,241,0.08)",
+                  },
+                }}
+              >
+                <ListItemText
+                  primary={
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                      {link.label}
+                      <LaunchIcon sx={{ fontSize: 14 }} />
+                    </Box>
+                  }
+                  primaryTypographyProps={{
+                    fontSize: 16,
+                    fontWeight: 500,
+                    color: isDarkMode ? "#fff" : "#22223b",
+                  }}
+                />
+              </ListItemButton>
             ) : (
+              // Handle internal links
               <ListItemButton
                 component={Link}
                 to={link.to}
@@ -241,7 +275,31 @@ const Navbar = () => {
                     >
                       {link.label}
                     </Button>
+                  ) : link.external ? (
+                    // Handle external links for desktop
+                    <Button
+                      onClick={() => handleExternalLink(link.external)}
+                      endIcon={<LaunchIcon sx={{ fontSize: 16 }} />}
+                      sx={{
+                        color: isDarkMode ? "#fff" : "#22223b",
+                        fontWeight: 500,
+                        fontSize: 16,
+                        textTransform: "none",
+                        transition: "color 0.2s",
+                        borderRadius: 2,
+                        px: 1.5,
+                        "&:hover": {
+                          color: isDarkMode ? "#bb86fc" : "#6366f1",
+                          bgcolor: isDarkMode
+                            ? "rgba(187,134,252,0.08)"
+                            : "rgba(99,102,241,0.08)",
+                        },
+                      }}
+                    >
+                      {link.label}
+                    </Button>
                   ) : (
+                    // Handle internal links for desktop
                     <Link to={link.to}>
                       <Button
                         sx={{
